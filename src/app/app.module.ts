@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
-import { ProductChildComponent } from './products/product-child/product-child.component';
-import { UsersRoutingModule } from './users/users-routing.module';
-
+import { ProvideComponent } from './componets/provide/provide.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Service } from './core/service/service';
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  declarations: [AppComponent, ProvideComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [Service],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
