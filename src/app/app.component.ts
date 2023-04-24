@@ -11,8 +11,10 @@ export class AppComponent {
   title = 'Max-task';
   destroyed = false;
 
-  constructor(private service: Service) {}
-
+  constructor(private service: Service) {
+    service.consoleText('Say whats up');
+  }
+  test = false;
   destroy() {
     this.destroyed = true;
   }

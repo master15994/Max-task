@@ -12,4 +12,8 @@ export class Service {
       .get<ITodo>('https://jsonplaceholder.typicode.com/todos/1')
       .pipe(map((res) => new Todo(res)));
   }
+
+  consoleText(arg: any) {
+    console.log(arg);
+  }
 }

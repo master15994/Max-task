@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { ProvideComponent } from './componets/provide/provide.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Service } from './core/service/service';
+import { OutputComponent } from './input/output/output.component';
 @NgModule({
-  declarations: [AppComponent, ProvideComponent],
+  declarations: [AppComponent, ProvideComponent, OutputComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [Service],
   bootstrap: [AppComponent],
