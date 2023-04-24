@@ -10,6 +10,7 @@ import { Service } from './core/service/service';
 export class AppComponent {
   title = 'Max-task';
   destroyed = false;
+  age = 28;
 
   constructor(private service: Service) {
     service.consoleText('Say whats up');
@@ -17,5 +18,9 @@ export class AppComponent {
   test = false;
   destroy() {
     this.destroyed = true;
+  }
+
+  onKick(text: any) {
+    console.log(text);
   }
 }

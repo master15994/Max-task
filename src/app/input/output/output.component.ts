@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-output',
@@ -7,12 +7,23 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OutputComponent implements OnInit {
   @Input()
-  tag: any;
+  counter = 0;
 
+  @Output()
+  counterChange = new EventEmitter<number>();
+
+  @Input()
+  tag: any;
+  @Output()
+  kick = new EventEmitter();
   constructor() {
     console.log('constructor', this.tag);
   }
   ngOnInit(): void {
     console.log('ngOnInit', this.tag);
+  }
+  @Output()
+  onKick() {
+    this.kick.emit(this.tag + 'piss off');
   }
 }

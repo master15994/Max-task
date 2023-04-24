@@ -1,5 +1,5 @@
 <!-- <app-provide *ngIf="!destroyed"></app-provide>
 <button (click)="destroy()">destroy</button> -->
-<app-output [tag]="test ? 'one' : 'two'"></app-output>
+<app-output [(counter)]="age" [tag]="test ? 'one' : 'two'"></app-output>
 
 <button (click)="test = !test">{{ !test ? "one" : "two" }}</button>

@@ -1,2 +1,11 @@
 <p>output works!</p>
 <h1>{{ tag.toUpperCase() }}</h1>
+
+<button (click)="onKick()">Kick ass!!</button>
+<hr />
+
+<div>
+  <button (click)="counterChange.emit(counter + 1)">+1</button>
+  <p>{{ counter }}</p>
+  <button (click)="counterChange.emit(counter - 1)">-1</button>
+</div>
